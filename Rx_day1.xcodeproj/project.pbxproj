@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05099588814A400FE0F185DA /* Pods_Rx_day1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB5CA618C63885438EDEB04 /* Pods_Rx_day1UITests.framework */; };
+		82EF957AEBA2C762904CB2E6 /* Pods_Rx_day1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9255EFB93BF1020CB42D8BD9 /* Pods_Rx_day1Tests.framework */; };
+		E169638E211041C700195881 /* SimpleValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E169638C211041C700195881 /* SimpleValidationViewController.swift */; };
+		E169638F211041C700195881 /* SimpleValidationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E169638D211041C700195881 /* SimpleValidationViewController.xib */; };
 		E1E9709D2110334600C486EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E9709C2110334600C486EF /* AppDelegate.swift */; };
 		E1E9709F2110334600C486EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E9709E2110334600C486EF /* ViewController.swift */; };
 		E1E970A22110334600C486EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E970A02110334600C486EF /* Main.storyboard */; };
@@ -14,6 +18,9 @@
 		E1E970A72110334600C486EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E970A52110334600C486EF /* LaunchScreen.storyboard */; };
 		E1E970B22110334700C486EF /* Rx_day1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E970B12110334700C486EF /* Rx_day1Tests.swift */; };
 		E1E970BD2110334700C486EF /* Rx_day1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E970BC2110334700C486EF /* Rx_day1UITests.swift */; };
+		E1E970CC2110349300C486EF /* MusicListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E970CA2110349200C486EF /* MusicListViewModel.swift */; };
+		E1E970CD2110349300C486EF /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E970CB2110349200C486EF /* MusicModel.swift */; };
+		F219A728BC4C4867058F471F /* Pods_Rx_day1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1D23767A218AC5B567CE70 /* Pods_Rx_day1.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0180C7C39E95FA2C19EFA304 /* Pods-Rx_day1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx_day1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rx_day1/Pods-Rx_day1.release.xcconfig"; sourceTree = "<group>"; };
+		312A899203A059AE44F100F9 /* Pods-Rx_day1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx_day1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rx_day1/Pods-Rx_day1.debug.xcconfig"; sourceTree = "<group>"; };
+		5B020F9D240577514570CBF7 /* Pods-Rx_day1Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx_day1Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rx_day1Tests/Pods-Rx_day1Tests.release.xcconfig"; sourceTree = "<group>"; };
+		5B1D23767A218AC5B567CE70 /* Pods_Rx_day1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rx_day1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B858A82C7232F770E18AFB3 /* Pods-Rx_day1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx_day1Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rx_day1Tests/Pods-Rx_day1Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		9255EFB93BF1020CB42D8BD9 /* Pods_Rx_day1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rx_day1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAB5CA618C63885438EDEB04 /* Pods_Rx_day1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rx_day1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E169638C211041C700195881 /* SimpleValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleValidationViewController.swift; sourceTree = "<group>"; };
+		E169638D211041C700195881 /* SimpleValidationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleValidationViewController.xib; sourceTree = "<group>"; };
 		E1E970992110334600C486EF /* Rx_day1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rx_day1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E9709C2110334600C486EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1E9709E2110334600C486EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +63,10 @@
 		E1E970B82110334700C486EF /* Rx_day1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Rx_day1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E970BC2110334700C486EF /* Rx_day1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rx_day1UITests.swift; sourceTree = "<group>"; };
 		E1E970BE2110334700C486EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1E970CA2110349200C486EF /* MusicListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicListViewModel.swift; sourceTree = "<group>"; };
+		E1E970CB2110349200C486EF /* MusicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
+		E2ABCCFF7C100493225136B9 /* Pods-Rx_day1UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx_day1UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rx_day1UITests/Pods-Rx_day1UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F6633293B64DCFB25F15DE86 /* Pods-Rx_day1UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx_day1UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rx_day1UITests/Pods-Rx_day1UITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F219A728BC4C4867058F471F /* Pods_Rx_day1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82EF957AEBA2C762904CB2E6 /* Pods_Rx_day1Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +90,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05099588814A400FE0F185DA /* Pods_Rx_day1UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40EAEAC48C66C85AD0CFA4B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B1D23767A218AC5B567CE70 /* Pods_Rx_day1.framework */,
+				9255EFB93BF1020CB42D8BD9 /* Pods_Rx_day1Tests.framework */,
+				CAB5CA618C63885438EDEB04 /* Pods_Rx_day1UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8CF28C4A858148758D90809 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				312A899203A059AE44F100F9 /* Pods-Rx_day1.debug.xcconfig */,
+				0180C7C39E95FA2C19EFA304 /* Pods-Rx_day1.release.xcconfig */,
+				6B858A82C7232F770E18AFB3 /* Pods-Rx_day1Tests.debug.xcconfig */,
+				5B020F9D240577514570CBF7 /* Pods-Rx_day1Tests.release.xcconfig */,
+				E2ABCCFF7C100493225136B9 /* Pods-Rx_day1UITests.debug.xcconfig */,
+				F6633293B64DCFB25F15DE86 /* Pods-Rx_day1UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E1E970902110334600C486EF = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +127,8 @@
 				E1E970B02110334700C486EF /* Rx_day1Tests */,
 				E1E970BB2110334700C486EF /* Rx_day1UITests */,
 				E1E9709A2110334600C486EF /* Products */,
+				A8CF28C4A858148758D90809 /* Pods */,
+				40EAEAC48C66C85AD0CFA4B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +145,12 @@
 		E1E9709B2110334600C486EF /* Rx_day1 */ = {
 			isa = PBXGroup;
 			children = (
+				E1E970CA2110349200C486EF /* MusicListViewModel.swift */,
+				E1E970CB2110349200C486EF /* MusicModel.swift */,
 				E1E9709C2110334600C486EF /* AppDelegate.swift */,
 				E1E9709E2110334600C486EF /* ViewController.swift */,
+				E169638C211041C700195881 /* SimpleValidationViewController.swift */,
+				E169638D211041C700195881 /* SimpleValidationViewController.xib */,
 				E1E970A02110334600C486EF /* Main.storyboard */,
 				E1E970A32110334600C486EF /* Assets.xcassets */,
 				E1E970A52110334600C486EF /* LaunchScreen.storyboard */,
@@ -132,9 +184,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1E970C12110334700C486EF /* Build configuration list for PBXNativeTarget "Rx_day1" */;
 			buildPhases = (
+				B6EDB6C9C43CE9C966D54234 /* [CP] Check Pods Manifest.lock */,
 				E1E970952110334600C486EF /* Sources */,
 				E1E970962110334600C486EF /* Frameworks */,
 				E1E970972110334600C486EF /* Resources */,
+				33AEFFAAF2A11C8F43E2CD6F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1E970C42110334700C486EF /* Build configuration list for PBXNativeTarget "Rx_day1Tests" */;
 			buildPhases = (
+				1FF9A54709E32F127EF2630F /* [CP] Check Pods Manifest.lock */,
 				E1E970A92110334700C486EF /* Sources */,
 				E1E970AA2110334700C486EF /* Frameworks */,
 				E1E970AB2110334700C486EF /* Resources */,
+				9408F2A43810DF3A83F58C4A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +223,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1E970C72110334700C486EF /* Build configuration list for PBXNativeTarget "Rx_day1UITests" */;
 			buildPhases = (
+				765BC53F97D4EFC083B321BC /* [CP] Check Pods Manifest.lock */,
 				E1E970B42110334700C486EF /* Sources */,
 				E1E970B52110334700C486EF /* Frameworks */,
 				E1E970B62110334700C486EF /* Resources */,
@@ -232,6 +289,7 @@
 				E1E970A72110334600C486EF /* LaunchScreen.storyboard in Resources */,
 				E1E970A42110334600C486EF /* Assets.xcassets in Resources */,
 				E1E970A22110334600C486EF /* Main.storyboard in Resources */,
+				E169638F211041C700195881 /* SimpleValidationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +309,115 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1FF9A54709E32F127EF2630F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rx_day1Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		33AEFFAAF2A11C8F43E2CD6F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Rx_day1/Pods-Rx_day1-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rx_day1/Pods-Rx_day1-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		765BC53F97D4EFC083B321BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rx_day1UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9408F2A43810DF3A83F58C4A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Rx_day1Tests/Pods-Rx_day1Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rx_day1Tests/Pods-Rx_day1Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6EDB6C9C43CE9C966D54234 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rx_day1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E1E970952110334600C486EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E1E9709F2110334600C486EF /* ViewController.swift in Sources */,
+				E1E970CD2110349300C486EF /* MusicModel.swift in Sources */,
 				E1E9709D2110334600C486EF /* AppDelegate.swift in Sources */,
+				E1E970CC2110349300C486EF /* MusicListViewModel.swift in Sources */,
+				E169638E211041C700195881 /* SimpleValidationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,42 +588,47 @@
 		};
 		E1E970C22110334700C486EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 312A899203A059AE44F100F9 /* Pods-Rx_day1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6B3539P8YN;
 				INFOPLIST_FILE = Rx_day1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cheanda.carmonitorv1.Rx-day1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		E1E970C32110334700C486EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0180C7C39E95FA2C19EFA304 /* Pods-Rx_day1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6B3539P8YN;
 				INFOPLIST_FILE = Rx_day1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cheanda.carmonitorv1.Rx-day1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		E1E970C52110334700C486EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B858A82C7232F770E18AFB3 /* Pods-Rx_day1Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -477,7 +642,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cheanda.carmonitorv1.Rx-day1Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rx_day1.app/Rx_day1";
 			};
@@ -485,6 +650,7 @@
 		};
 		E1E970C62110334700C486EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B020F9D240577514570CBF7 /* Pods-Rx_day1Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -498,7 +664,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cheanda.carmonitorv1.Rx-day1Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rx_day1.app/Rx_day1";
 			};
@@ -506,6 +672,7 @@
 		};
 		E1E970C82110334700C486EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2ABCCFF7C100493225136B9 /* Pods-Rx_day1UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -518,7 +685,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cheanda.carmonitorv1.Rx-day1UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Rx_day1;
 			};
@@ -526,6 +693,7 @@
 		};
 		E1E970C92110334700C486EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6633293B64DCFB25F15DE86 /* Pods-Rx_day1UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -538,7 +706,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cheanda.carmonitorv1.Rx-day1UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Rx_day1;
 			};
