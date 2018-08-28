@@ -1,31 +1,56 @@
 PODS:
+  - Differentiator (2.0.2)
+  - "NSObject+Rx (4.0.0)":
+    - RxSwift (~> 3.0)
   - RxBlocking (3.6.1):
     - RxSwift (~> 3.6)
   - RxCocoa (3.6.1):
     - RxSwift (~> 3.6)
+  - RxDataSources (2.0.2):
+    - Differentiator (~> 2.0)
+    - RxCocoa (>= 3.6.1)
+    - RxSwift (>= 3.6.1)
+  - RxGesture (1.1.1):
+    - RxCocoa (~> 3.6)
+    - RxSwift (~> 3.6)
   - RxSwift (3.6.1)
   - RxTest (3.6.1):
     - RxSwift (~> 3.6)
+  - Then (2.3.0)
 
 DEPENDENCIES:
+  - "NSObject+Rx"
   - RxBlocking (~> 3.0)
   - RxCocoa (~> 3.0)
+  - RxDataSources (~> 2.0.2)
+  - RxGesture
   - RxSwift (~> 3.0)
   - RxTest (~> 3.0)
+  - Then
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Differentiator
+    - "NSObject+Rx"
     - RxBlocking
     - RxCocoa
+    - RxDataSources
+    - RxGesture
     - RxSwift
     - RxTest
+    - Then
 
 SPEC CHECKSUMS:
+  Differentiator: caa9b3957981a2ac8e6b2eac8a676af461caa604
+  "NSObject+Rx": 017ec6d79550ba2addae7d4c99472d0fd48b627b
   RxBlocking: 4f4bd5732e8b952e54ae8a57739bcfb645de12bc
   RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
+  RxDataSources: 7f190474a93a206c082c2d74c4cc9c8f7bea4feb
+  RxGesture: a297957f2940b50f7073d1e7ff0eaa3f87cd27a5
   RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
   RxTest: 1d00348a7848c91ab5bf5d197d2378aa6b2bb356
+  Then: ee21c97b85ff6062b9b0080c9abb1eea46743345
 
-PODFILE CHECKSUM: b7efc64049ae05814e80a44dc41fb026dea60483
+PODFILE CHECKSUM: 46d59ac6b4e0412f23f495295e6ac09252af5718
 
 COCOAPODS: 1.5.3

@@ -11,6 +11,9 @@
 		82EF957AEBA2C762904CB2E6 /* Pods_Rx_day1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9255EFB93BF1020CB42D8BD9 /* Pods_Rx_day1Tests.framework */; };
 		E169638E211041C700195881 /* SimpleValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E169638C211041C700195881 /* SimpleValidationViewController.swift */; };
 		E169638F211041C700195881 /* SimpleValidationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E169638D211041C700195881 /* SimpleValidationViewController.xib */; };
+		E16963922111A44300195881 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16963902111A44300195881 /* PDFViewController.swift */; };
+		E16963932111A44300195881 /* PDFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E16963912111A44300195881 /* PDFViewController.xib */; };
+		E16963972111A9E000195881 /* PDF.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E16963962111A9E000195881 /* PDF.pdf */; };
 		E1E9709D2110334600C486EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E9709C2110334600C486EF /* AppDelegate.swift */; };
 		E1E9709F2110334600C486EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E9709E2110334600C486EF /* ViewController.swift */; };
 		E1E970A22110334600C486EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E970A02110334600C486EF /* Main.storyboard */; };
@@ -50,6 +53,9 @@
 		CAB5CA618C63885438EDEB04 /* Pods_Rx_day1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rx_day1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E169638C211041C700195881 /* SimpleValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleValidationViewController.swift; sourceTree = "<group>"; };
 		E169638D211041C700195881 /* SimpleValidationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleValidationViewController.xib; sourceTree = "<group>"; };
+		E16963902111A44300195881 /* PDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
+		E16963912111A44300195881 /* PDFViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PDFViewController.xib; sourceTree = "<group>"; };
+		E16963962111A9E000195881 /* PDF.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PDF.pdf; sourceTree = "<group>"; };
 		E1E970992110334600C486EF /* Rx_day1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rx_day1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E9709C2110334600C486EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1E9709E2110334600C486EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -145,12 +151,15 @@
 		E1E9709B2110334600C486EF /* Rx_day1 */ = {
 			isa = PBXGroup;
 			children = (
+				E16963962111A9E000195881 /* PDF.pdf */,
 				E1E970CA2110349200C486EF /* MusicListViewModel.swift */,
 				E1E970CB2110349200C486EF /* MusicModel.swift */,
 				E1E9709C2110334600C486EF /* AppDelegate.swift */,
 				E1E9709E2110334600C486EF /* ViewController.swift */,
 				E169638C211041C700195881 /* SimpleValidationViewController.swift */,
 				E169638D211041C700195881 /* SimpleValidationViewController.xib */,
+				E16963902111A44300195881 /* PDFViewController.swift */,
+				E16963912111A44300195881 /* PDFViewController.xib */,
 				E1E970A02110334600C486EF /* Main.storyboard */,
 				E1E970A32110334600C486EF /* Assets.xcassets */,
 				E1E970A52110334600C486EF /* LaunchScreen.storyboard */,
@@ -286,8 +295,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E16963932111A44300195881 /* PDFViewController.xib in Resources */,
 				E1E970A72110334600C486EF /* LaunchScreen.storyboard in Resources */,
 				E1E970A42110334600C486EF /* Assets.xcassets in Resources */,
+				E16963972111A9E000195881 /* PDF.pdf in Resources */,
 				E1E970A22110334600C486EF /* Main.storyboard in Resources */,
 				E169638F211041C700195881 /* SimpleValidationViewController.xib in Resources */,
 			);
@@ -335,13 +346,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Rx_day1/Pods-Rx_day1-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/NSObject+Rx/NSObject_Rx.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObject_Rx.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -416,6 +437,7 @@
 				E1E9709F2110334600C486EF /* ViewController.swift in Sources */,
 				E1E970CD2110349300C486EF /* MusicModel.swift in Sources */,
 				E1E9709D2110334600C486EF /* AppDelegate.swift in Sources */,
+				E16963922111A44300195881 /* PDFViewController.swift in Sources */,
 				E1E970CC2110349300C486EF /* MusicListViewModel.swift in Sources */,
 				E169638E211041C700195881 /* SimpleValidationViewController.swift in Sources */,
 			);

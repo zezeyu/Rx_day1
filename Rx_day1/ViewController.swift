@@ -14,7 +14,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     //tableView对象
     @IBOutlet weak var tableView: UITableView!
     
-    let dataArray:[String] = ["输入验证"]
+    let dataArray:[String] = ["输入验证","PDF展示"]
     
     
     //歌曲列表数据源
@@ -48,9 +48,20 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     //点击
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let simple = SimpleValidationViewController()
-        simple.title = dataArray[indexPath.row]
-        self.navigationController?.pushViewController(simple, animated: true)
+        switch indexPath.row {
+        case 0:
+            let simple = SimpleValidationViewController()
+            simple.title = dataArray[indexPath.row]
+            self.navigationController?.pushViewController(simple, animated: true)
+            break
+        case 1:
+            let pdf = PDFViewController()
+            pdf.title = dataArray[indexPath.row]
+            self.navigationController?.pushViewController(pdf, animated: true)
+            break
+        default:
+            break
+        }
     }
     let CELL_ID = "cellID"
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

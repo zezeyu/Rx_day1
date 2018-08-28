@@ -8,6 +8,10 @@ target 'Rx_day1' do
   # Pods for Rx_day1
   pod 'RxSwift',    '~> 3.0'
   pod 'RxCocoa',    '~> 3.0'
+  pod 'RxDataSources',    '~> 2.0.2'
+  pod 'NSObject+Rx'
+  pod 'RxGesture'
+  pod 'Then'
   target 'Rx_day1Tests' do
       pod 'RxBlocking', '~> 3.0'
       pod 'RxTest',     '~> 3.0'
