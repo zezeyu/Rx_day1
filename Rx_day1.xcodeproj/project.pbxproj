@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		05099588814A400FE0F185DA /* Pods_Rx_day1UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB5CA618C63885438EDEB04 /* Pods_Rx_day1UITests.framework */; };
 		82EF957AEBA2C762904CB2E6 /* Pods_Rx_day1Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9255EFB93BF1020CB42D8BD9 /* Pods_Rx_day1Tests.framework */; };
+		E1090A10213D1301008094BF /* RxDay3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1090A0F213D1301008094BF /* RxDay3ViewController.swift */; };
 		E169638E211041C700195881 /* SimpleValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E169638C211041C700195881 /* SimpleValidationViewController.swift */; };
 		E169638F211041C700195881 /* SimpleValidationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E169638D211041C700195881 /* SimpleValidationViewController.xib */; };
 		E16963922111A44300195881 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16963902111A44300195881 /* PDFViewController.swift */; };
 		E16963932111A44300195881 /* PDFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E16963912111A44300195881 /* PDFViewController.xib */; };
 		E16963972111A9E000195881 /* PDF.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E16963962111A9E000195881 /* PDF.pdf */; };
+		E19979512134F6D1003D773B /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19979502134F6D1003D773B /* MusicViewController.swift */; };
 		E1E9709D2110334600C486EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E9709C2110334600C486EF /* AppDelegate.swift */; };
 		E1E9709F2110334600C486EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E9709E2110334600C486EF /* ViewController.swift */; };
 		E1E970A22110334600C486EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E970A02110334600C486EF /* Main.storyboard */; };
@@ -51,11 +53,13 @@
 		6B858A82C7232F770E18AFB3 /* Pods-Rx_day1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx_day1Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rx_day1Tests/Pods-Rx_day1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9255EFB93BF1020CB42D8BD9 /* Pods_Rx_day1Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rx_day1Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB5CA618C63885438EDEB04 /* Pods_Rx_day1UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rx_day1UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1090A0F213D1301008094BF /* RxDay3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxDay3ViewController.swift; sourceTree = "<group>"; };
 		E169638C211041C700195881 /* SimpleValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleValidationViewController.swift; sourceTree = "<group>"; };
 		E169638D211041C700195881 /* SimpleValidationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleValidationViewController.xib; sourceTree = "<group>"; };
 		E16963902111A44300195881 /* PDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
 		E16963912111A44300195881 /* PDFViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PDFViewController.xib; sourceTree = "<group>"; };
 		E16963962111A9E000195881 /* PDF.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PDF.pdf; sourceTree = "<group>"; };
+		E19979502134F6D1003D773B /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		E1E970992110334600C486EF /* Rx_day1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rx_day1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E9709C2110334600C486EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1E9709E2110334600C486EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E199794F2134F69A003D773B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E19979502134F6D1003D773B /* MusicViewController.swift */,
+				E1090A0F213D1301008094BF /* RxDay3ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		E1E970902110334600C486EF = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +164,7 @@
 		E1E9709B2110334600C486EF /* Rx_day1 */ = {
 			isa = PBXGroup;
 			children = (
+				E199794F2134F69A003D773B /* Controller */,
 				E16963962111A9E000195881 /* PDF.pdf */,
 				E1E970CA2110349200C486EF /* MusicListViewModel.swift */,
 				E1E970CB2110349200C486EF /* MusicModel.swift */,
@@ -352,6 +366,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -362,6 +377,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,11 +451,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1E9709F2110334600C486EF /* ViewController.swift in Sources */,
+				E19979512134F6D1003D773B /* MusicViewController.swift in Sources */,
 				E1E970CD2110349300C486EF /* MusicModel.swift in Sources */,
 				E1E9709D2110334600C486EF /* AppDelegate.swift in Sources */,
 				E16963922111A44300195881 /* PDFViewController.swift in Sources */,
 				E1E970CC2110349300C486EF /* MusicListViewModel.swift in Sources */,
 				E169638E211041C700195881 /* SimpleValidationViewController.swift in Sources */,
+				E1090A10213D1301008094BF /* RxDay3ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

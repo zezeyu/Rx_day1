@@ -14,7 +14,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     //tableView对象
     @IBOutlet weak var tableView: UITableView!
     
-    let dataArray:[String] = ["输入验证","PDF展示"]
+    let dataArray:[String] = ["SimpleValidation","PDF","Music","RxDay3"]
     
     
     //歌曲列表数据源
@@ -48,20 +48,13 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     //点击
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        switch indexPath.row {
-        case 0:
-            let simple = SimpleValidationViewController()
-            simple.title = dataArray[indexPath.row]
-            self.navigationController?.pushViewController(simple, animated: true)
-            break
-        case 1:
-            let pdf = PDFViewController()
-            pdf.title = dataArray[indexPath.row]
-            self.navigationController?.pushViewController(pdf, animated: true)
-            break
-        default:
-            break
-        }
+        let projectName = self.getProjectName()
+        let clsName = dataArray[indexPath.row]
+        let clsType = NSClassFromString(projectName+clsName+"ViewController") as! UIViewController.Type
+        let vc = clsType.init()
+        vc.title = dataArray[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     let CELL_ID = "cellID"
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -72,7 +65,16 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataArray.count
     }
-    
+    private func getProjectName() -> String {
+        guard let infoDict = Bundle.main.infoDictionary else {
+            return "."
+        }
+        let key = kCFBundleExecutableKey as String
+        guard let value = infoDict[key] as? String else {
+            return "."
+        }
+        return value + "."
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

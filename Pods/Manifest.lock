@@ -16,6 +16,7 @@ PODS:
   - RxSwift (3.6.1)
   - RxTest (3.6.1):
     - RxSwift (~> 3.6)
+  - SnapKit (3.0.2)
   - Then (2.3.0)
 
 DEPENDENCIES:
@@ -26,6 +27,7 @@ DEPENDENCIES:
   - RxGesture
   - RxSwift (~> 3.0)
   - RxTest (~> 3.0)
+  - SnapKit (~> 3.0.0)
   - Then
 
 SPEC REPOS:
@@ -38,6 +40,7 @@ SPEC REPOS:
     - RxGesture
     - RxSwift
     - RxTest
+    - SnapKit
     - Then
 
 SPEC CHECKSUMS:
@@ -49,8 +52,9 @@ SPEC CHECKSUMS:
   RxGesture: a297957f2940b50f7073d1e7ff0eaa3f87cd27a5
   RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
   RxTest: 1d00348a7848c91ab5bf5d197d2378aa6b2bb356
+  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
   Then: ee21c97b85ff6062b9b0080c9abb1eea46743345
 
-PODFILE CHECKSUM: 46d59ac6b4e0412f23f495295e6ac09252af5718
+PODFILE CHECKSUM: 23d297f101d6a8393ee5ee49f1b11b33d1538251
 
 COCOAPODS: 1.5.3

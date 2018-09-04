@@ -12,6 +12,7 @@ target 'Rx_day1' do
   pod 'NSObject+Rx'
   pod 'RxGesture'
   pod 'Then'
+  pod 'SnapKit', '~> 3.0.0'
   target 'Rx_day1Tests' do
       pod 'RxBlocking', '~> 3.0'
       pod 'RxTest',     '~> 3.0'
