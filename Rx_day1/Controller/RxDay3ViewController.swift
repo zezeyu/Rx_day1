@@ -28,6 +28,27 @@ class RxDay3ViewController: UIViewController {
             print($0)
         }
         
+        let ob = Observable.of("A","B","C")
+        ob.subscribe{ event in
+            print(event)
+        }
+        
+        let label:UILabel = UILabel(frame: CGRect(x: 100, y: 200, width: 200, height: 100))
+        label.textColor = UIColor.black
+        self.view.addSubview(label)
+        ob.subscribe{
+            print($0.element ?? String.self)
+        }
+        ob.subscribe(onNext: { (element) in
+            label.text = element
+        }, onError: { (error) in
+            print(error)
+        }, onCompleted: {
+            print("completed")
+        }, onDisposed: {
+            print("disposed")
+        })
+        
         self.view.backgroundColor = UIColor.white
     }
 
