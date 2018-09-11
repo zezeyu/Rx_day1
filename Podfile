@@ -12,6 +12,9 @@ target 'Rx_day1' do
   pod 'NSObject+Rx'
   pod 'RxGesture'
   pod 'Then'
+  pod 'Moya'
+  pod 'Result', '~> 3.1.0'
+  pod 'Alamofire', '~> 4.7'
   pod 'SnapKit', '~> 3.0.0'
   target 'Rx_day1Tests' do
       pod 'RxBlocking', '~> 3.0'

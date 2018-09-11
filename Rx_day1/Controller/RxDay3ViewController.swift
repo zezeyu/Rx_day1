@@ -13,7 +13,7 @@ class RxDay3ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor.white
         let observable = Observable<String>.create{observer in
             
             observer.onNext("hangge.com")
@@ -49,7 +49,30 @@ class RxDay3ViewController: UIViewController {
             print("disposed")
         })
         
-        self.view.backgroundColor = UIColor.white
+        print("----------------------------------------------------------------")
+        
+        let observable2 = Observable.of("泽泽","露露","蕾蕾")
+        observable2
+            .do(onNext: { (element) in
+                print("Intercepted Next:", element)
+            }, onError: { (error) in
+                print("Intercepted Error:", error)
+            }, onCompleted: {
+                print("Intercepted Completed")
+            }, onDispose: {
+                print("Intercepted Disposed")
+            })
+            .subscribe(onNext: { (element) in
+                print(element)
+            }, onError: { (error) in
+                print(error)
+            }, onCompleted: {
+                print("completed")
+            }, onDisposed: {
+                print("disposed")
+            })
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
