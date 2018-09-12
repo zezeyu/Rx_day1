@@ -24,6 +24,7 @@ class MoyaViewController: UIViewController, UITableViewDelegate, UITableViewData
     //频道列表数据
     var channels:Array<JSON> = []
     
+    
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -66,16 +67,78 @@ class MoyaViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     //创建各单元显示内容(创建参数indexPath指定的单元）
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            //为了提供表格显示性能，已创建完成的单元需重复使用
-            let identify:String = "SwiftCell"
-            let cell = tableView.dequeueReusableCell(
-                withIdentifier: identify, for: indexPath)
-            cell.accessoryType = .disclosureIndicator
-            //设置单元格内容
-            cell.textLabel?.text = channels[indexPath.row]["name"].stringValue
-            return cell
+        //为了提供表格显示性能，已创建完成的单元需重复使用
+        let identify:String = "SwiftCell"
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: identify, for: indexPath)
+        cell.accessoryType = .disclosureIndicator
+        //设置单元格内容
+        cell.textLabel?.text = channels[indexPath.row]["name"].stringValue
+        return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        //获取选中项信息
+        let channelName = channels[indexPath.row]["name"].stringValue
+        let channelId = channels[indexPath.row]["channel_id"].stringValue
+        //使用我们的provider进行网络请求（根据频道ID获取下面的歌曲）
+        DouBanProvider.request(.playlist(channelId)) { (result) in
+            switch result {
+            case let .success(response):
+//                let statusCode = response.statusCode // 响应状态
+                //解析数据，获取歌曲信息
+                let data = try? response.mapJSON()
+                let json = JSON(data!)
+                print(json)
+                let array = json["song"].arrayValue
+                if array.count > 0{
+                    let music = json["song"].arrayValue[0]
+                    let artist = music["artist"].stringValue
+                    let title = music["title"].stringValue
+                    let message = "歌手：\(artist)\n歌曲：\(title)"
+                    //将歌曲信息弹出显示
+                    self.showAlert(title: channelName, message: message)
+                }
+            case let .failure(error):
+                switch error {
+                case .imageMapping(let response):
+                    print("错误原因：\(error.errorDescription ?? "")")
+                    print(response)
+                case .jsonMapping(let response):
+                    print("错误原因：\(error.errorDescription ?? "")")
+                    print(response)
+                case .statusCode(let response):
+                    print("错误原因：\(error.errorDescription ?? "")")
+                    print(response)
+                case .stringMapping(let response):
+                    print("错误原因：\(error.errorDescription ?? "")")
+                    print(response)
+                case .underlying(let error, let response):
+//                    print("错误原因：\(error.errorDescription ?? "")")
+                    print(error)
+                    print(response as Any)
+                case .requestMapping:
+                    print("错误原因：\(error.errorDescription ?? "")")
+                    print("nil")
+                case .objectMapping(_, _): break
+                case .encodableMapping(_): break
+                case .parameterEncoding(_): break
+                    
+                }
+            }
+
+        }
+        
+    }
+    //显示消息
+    func showAlert(title:String, message:String){
+        let alertController = UIAlertController(title: title,
+                                                message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "确定", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

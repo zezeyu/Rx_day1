@@ -14,7 +14,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     //tableView对象
     @IBOutlet weak var tableView: UITableView!
     
-    let dataArray:[String] = ["SimpleValidation","PDF","Music","RxDay3"]
+    let dataArray:[String] = ["SimpleValidation","PDF","Music","RxDay3","Moya"]
     
     
     //歌曲列表数据源
