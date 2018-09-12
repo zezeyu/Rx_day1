@@ -11,7 +11,7 @@ import Moya
 import RxSwift
 import RxCocoa
 import Result
-
+import Alamofire
 //初始化豆瓣FM请求的provider
 let DouBanProvider = MoyaProvider<DouBanAPI>()
 
@@ -24,6 +24,7 @@ public enum DouBanAPI {
 
 //请求配置
 extension DouBanAPI: TargetType {
+   
     //服务器地址
     public var baseURL: URL {
         switch self {
