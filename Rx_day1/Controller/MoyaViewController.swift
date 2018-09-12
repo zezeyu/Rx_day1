@@ -83,23 +83,34 @@ class MoyaViewController: UIViewController, UITableViewDelegate, UITableViewData
         let channelName = channels[indexPath.row]["name"].stringValue
         let channelId = channels[indexPath.row]["channel_id"].stringValue
         //使用我们的provider进行网络请求（根据频道ID获取下面的歌曲）
+        /*
         DouBanProvider.request(.playlist(channelId)) { (result) in
             switch result {
             case let .success(response):
 //                let statusCode = response.statusCode // 响应状态
-                //解析数据，获取歌曲信息
-                let data = try? response.mapJSON()
-                let json = JSON(data!)
-                print(json)
-                let array = json["song"].arrayValue
-                if array.count > 0{
-                    let music = json["song"].arrayValue[0]
-                    let artist = music["artist"].stringValue
-                    let title = music["title"].stringValue
-                    let message = "歌手：\(artist)\n歌曲：\(title)"
-                    //将歌曲信息弹出显示
-                    self.showAlert(title: channelName, message: message)
+                do {
+                    //过滤成功的状态码响应
+                    try response.filterSuccessfulStatusCodes()
+                    //解析数据，获取歌曲信息
+                    let data = try? response.mapJSON()
+                    let json = JSON(data!)
+                    print(json)
+                    let array = json["song"].arrayValue
+                    if array.count > 0{
+                        let music = json["song"].arrayValue[0]
+                        let artist = music["artist"].stringValue
+                        let title = music["title"].stringValue
+                        let message = "歌手：\(artist)\n歌曲：\(title)"
+                        //将歌曲信息弹出显示
+                        self.showAlert(title: channelName, message: message)
+                    }
+                    
+                    
                 }
+                catch {
+                    //处理错误状态码的响应
+                }
+                
             case let .failure(error):
                 switch error {
                 case .imageMapping(let response):
@@ -129,6 +140,21 @@ class MoyaViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
 
         }
+      */
+        Network.request(.playlist(channelId), success: { (json) in
+            //获取歌曲信息
+            let music = json["song"].arrayValue[0]
+            let artist = music["artist"].stringValue
+            let title = music["title"].stringValue
+            let message = "歌手：\(artist)\n歌曲：\(title)"
+            //将歌曲信息弹出显出
+            self.showAlert(title: channelName, message: message)
+    
+        }, error: { (statusCode) in
+            print("请求错误！错误码：\(statusCode)")
+        }, failure: { error in
+            print("请求失败！错误信息：\(error.errorDescription ?? "")")
+        })
         
     }
     //显示消息
