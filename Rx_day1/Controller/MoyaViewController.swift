@@ -182,4 +182,36 @@ class MoyaViewController: UIViewController, UITableViewDelegate, UITableViewData
     */
 
 }
+// MARK: 文件上传
+extension MoyaViewController{
+    func upload_data() {
+        //需要上传的文件
+        let fileURL = Bundle.main.url(forResource: "", withExtension: "")!
+        //通过Moya提交数据
+        MyServiceProvider.request(.upload(fileURL: fileURL)) { (result) in
+            if case let .success(response) = result {
+                //解析数据
+                let data = try? response.mapString()
+                print(data ?? "")
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

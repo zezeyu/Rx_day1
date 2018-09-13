@@ -20,6 +20,7 @@
 		E19979512134F6D1003D773B /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19979502134F6D1003D773B /* MusicViewController.swift */; };
 		E1D5C837214936BA00B0711B /* HttpbinAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5C836214936BA00B0711B /* HttpbinAPI.swift */; };
 		E1D5C8392149451E00B0711B /* MoyaNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5C8382149451E00B0711B /* MoyaNetwork.swift */; };
+		E1D5C83B2149F86800B0711B /* MyServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5C83A2149F86800B0711B /* MyServiceAPI.swift */; };
 		E1E9709D2110334600C486EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E9709C2110334600C486EF /* AppDelegate.swift */; };
 		E1E9709F2110334600C486EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E9709E2110334600C486EF /* ViewController.swift */; };
 		E1E970A22110334600C486EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E970A02110334600C486EF /* Main.storyboard */; };
@@ -68,6 +69,7 @@
 		E19979502134F6D1003D773B /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		E1D5C836214936BA00B0711B /* HttpbinAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpbinAPI.swift; sourceTree = "<group>"; };
 		E1D5C8382149451E00B0711B /* MoyaNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaNetwork.swift; sourceTree = "<group>"; };
+		E1D5C83A2149F86800B0711B /* MyServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyServiceAPI.swift; sourceTree = "<group>"; };
 		E1E970992110334600C486EF /* Rx_day1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rx_day1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E9709C2110334600C486EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1E9709E2110334600C486EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				E10BE31D2147EB1400FE7B80 /* DouBanAPI.swift */,
 				E1D5C836214936BA00B0711B /* HttpbinAPI.swift */,
 				E1D5C8382149451E00B0711B /* MoyaNetwork.swift */,
+				E1D5C83A2149F86800B0711B /* MyServiceAPI.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				E1D5C837214936BA00B0711B /* HttpbinAPI.swift in Sources */,
 				E1E970CC2110349300C486EF /* MusicListViewModel.swift in Sources */,
 				E169638E211041C700195881 /* SimpleValidationViewController.swift in Sources */,
+				E1D5C83B2149F86800B0711B /* MyServiceAPI.swift in Sources */,
 				E1090A10213D1301008094BF /* RxDay3ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
