@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.7.3)
   - Differentiator (2.0.2)
+  - MBProgressHUD (0.9.2)
   - Moya (11.0.2):
     - Moya/Core (= 11.0.2)
   - Moya/Core (11.0.2):
@@ -29,6 +30,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - MBProgressHUD (~> 0.9.2)
   - Moya
   - "NSObject+Rx"
   - Result (~> 3.1.0)
@@ -46,6 +48,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Differentiator
+    - MBProgressHUD
     - Moya
     - "NSObject+Rx"
     - Result
@@ -62,6 +65,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   Differentiator: caa9b3957981a2ac8e6b2eac8a676af461caa604
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   "NSObject+Rx": 017ec6d79550ba2addae7d4c99472d0fd48b627b
   Result: 4e3ed5995ed94d0cd6a09be9a431fce3f3624bbf
@@ -75,6 +79,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
   Then: ee21c97b85ff6062b9b0080c9abb1eea46743345
 
-PODFILE CHECKSUM: 0d58d99775bd65d754e3eda5ec104ef7e0e50fd7
+PODFILE CHECKSUM: c8389afcd7a1453e8bff98e12cfcf83ae68e016f
 
 COCOAPODS: 1.5.3

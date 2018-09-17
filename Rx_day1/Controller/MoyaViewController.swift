@@ -37,6 +37,10 @@ class MoyaViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "SwiftCell")
         
+        let DouBanProvider = MoyaProvider<DouBanAPI>(plugins: [
+            RequestAlertPlugin(viewController: self)
+            ])
+        
         //使用我们的provider进行网络请求（获取频道列表数据）
         DouBanProvider.request(.channels){ result in
             if case let .success(response) = result {
@@ -52,6 +56,13 @@ class MoyaViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
                 
             }
+        }
+        let provider = MoyaProvider<MultiTarget>()
+        provider.request(MultiTarget(DouBanAPI.channels)) { (result) in
+            
+        }
+        provider.request(MultiTarget(Httpbin.anything("hangge.com"))) { (result) in
+            
         }
 
         
@@ -186,15 +197,15 @@ class MoyaViewController: UIViewController, UITableViewDelegate, UITableViewData
 extension MoyaViewController{
     func upload_data() {
         //需要上传的文件
-        let fileURL = Bundle.main.url(forResource: "", withExtension: "")!
-        //通过Moya提交数据
-        MyServiceProvider.request(.upload(fileURL: fileURL)) { (result) in
-            if case let .success(response) = result {
-                //解析数据
-                let data = try? response.mapString()
-                print(data ?? "")
-            }
-        }
+//        let fileURL = Bundle.main.url(forResource: "", withExtension: "")!
+//        //通过Moya提交数据
+//        MyServiceProvider.request(.upload(fileURL: fileURL)) { (result) in
+//            if case let .success(response) = result {
+//                //解析数据
+//                let data = try? response.mapString()
+//                print(data)
+//            }
+//        }
     }
 }
 

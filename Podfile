@@ -19,6 +19,7 @@ target 'Rx_day1' do
   pod 'Result', '~> 3.1.0'
   pod 'Alamofire', '~> 4.7'
   pod 'SnapKit', '~> 3.0.0'
+  pod 'MBProgressHUD', '~> 0.9.2'
   target 'Rx_day1Tests' do
       pod 'RxBlocking', '~> 3.0'
       pod 'RxTest',     '~> 3.0'

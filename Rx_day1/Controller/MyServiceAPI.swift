@@ -14,7 +14,8 @@ let MyServiceProvider = MoyaProvider<MyService>()
 
 //请求分类
 public enum MyService {
-    case upload(fileURL:URL)//上传文件
+//    case upload(fileURL:URL)//上传文件
+    case uploadFile(value1: String, value2: Int, file1Data:Data, file2URL:URL)//上传文件
 }
 
 //请求配置
@@ -35,8 +36,22 @@ extension MyService:TargetType {
     //请求任务事件（这里附带上参数）
     public var task: Task{
         switch self {
-        case let .upload(fileURL):
-            return .uploadFile(fileURL)
+        case let .uploadFile(value1,value2,file1Data,file2URL):
+            //字符串
+            let strData = value1.data(using: .utf8)
+            let formData1 = MultipartFormData(provider: .data(strData!), name: "value1")
+            //数字
+            let intData = String(value2).data(using: .utf8)
+            let formData2 = MultipartFormData(provider: .data(intData!), name: "value2")
+            //文件1
+            let formData3 = MultipartFormData(provider: .data(file1Data), name: "file1",
+                                              fileName: "hangge.png", mimeType: "image/png")
+            //文件2
+            let formData4 = MultipartFormData(provider: .file(file2URL), name: "file2",
+                                              fileName: "h.png", mimeType: "image/png")
+            
+            let multipartData = [formData1, formData2, formData3, formData4]
+            return .uploadMultipart(multipartData)
         }
     }
     //是否执行Alamofire验证

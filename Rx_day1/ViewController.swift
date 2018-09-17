@@ -9,7 +9,6 @@
 import UIKit
 import RxSwift
 import RxCocoa
-
 class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     //tableView对象
     @IBOutlet weak var tableView: UITableView!
