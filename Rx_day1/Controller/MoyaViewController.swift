@@ -152,6 +152,24 @@ class MoyaViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         }
       */
+        let DouBanProvider = MoyaProvider<DouBanAPI>(plugins: [
+            RequestAlertPlugin(viewController: self)
+            ])
+        DouBanProvider.request(.playlist(channelId)) { (result) in
+            if case let .success(response) = result {
+                //解析数据
+                let data = try? response.mapJSON()
+                let json = JSON(data!)
+                //获取歌曲信息
+                let music = json["song"].arrayValue[0]
+                let artist = music["artist"].stringValue
+                let title = music["title"].stringValue
+                let message = "歌手：\(artist)\n歌曲：\(title)"
+                //将歌曲信息弹出显出
+                self.showAlert(title: channelName, message: message)
+            }
+        }
+        /*
         Network.request(.playlist(channelId), success: { (json) in
             //获取歌曲信息
             let music = json["song"].arrayValue[0]
@@ -166,6 +184,7 @@ class MoyaViewController: UIViewController, UITableViewDelegate, UITableViewData
         }, failure: { error in
             print("请求失败！错误信息：\(error.errorDescription ?? "")")
         })
+ */
         
     }
     //显示消息

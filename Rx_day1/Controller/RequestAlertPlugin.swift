@@ -29,19 +29,20 @@ final class RequestAlertPlugin: PluginType {
     }
     
     //开始发起请求
-    func willSend(_ request: RequestType, target: TargetType,message:String="正在加载") {
+    func willSend(_ request: RequestType, target: TargetType) {
         //请求时在界面中央显示一个活动状态指示器
 //        viewController.view.addSubview(spinner)
 //        spinner.startAnimating()
-        MBProgressHUD.showMessage(message: message, toView: viewController.view)
+        MB = MBProgressHUD.showMessage(message: "正在加载", toView: viewController.view)
     }
     
     //收起请求
     func didReceive(_ result: Result<Moya.Response, MoyaError>, target: TargetType) {
         //移除界面中央的活动状态指示器
-        spinner.removeFromSuperview()
-        spinner.stopAnimating()
-        
+//        spinner.removeFromSuperview()
+//        spinner.stopAnimating()
+//        MBProgressHUD.hideHUDForView(view: viewController.view)
+        MB.hide(true)
         //只有请求错误时会继续往下执行
         guard case let Result.failure(error) = result else {
             return
