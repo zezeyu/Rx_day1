@@ -17,6 +17,10 @@
 		E16963922111A44300195881 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E16963902111A44300195881 /* PDFViewController.swift */; };
 		E16963932111A44300195881 /* PDFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E16963912111A44300195881 /* PDFViewController.xib */; };
 		E16963972111A9E000195881 /* PDF.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E16963962111A9E000195881 /* PDF.pdf */; };
+		E169D96C21C9F2C800FA6CEE /* MJRefresh+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E169D96B21C9F2C800FA6CEE /* MJRefresh+Rx.swift */; };
+		E169D96E21CA1B2300FA6CEE /* RxMJRefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E169D96D21CA1B2300FA6CEE /* RxMJRefreshViewController.swift */; };
+		E169D97121CA1B9700FA6CEE /* RefreshService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E169D97021CA1B9700FA6CEE /* RefreshService.swift */; };
+		E169D97321CA1CF900FA6CEE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E169D97221CA1CF900FA6CEE /* ViewModel.swift */; };
 		E19979512134F6D1003D773B /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19979502134F6D1003D773B /* MusicViewController.swift */; };
 		E1D5C837214936BA00B0711B /* HttpbinAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5C836214936BA00B0711B /* HttpbinAPI.swift */; };
 		E1D5C8392149451E00B0711B /* MoyaNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D5C8382149451E00B0711B /* MoyaNetwork.swift */; };
@@ -70,6 +74,10 @@
 		E16963902111A44300195881 /* PDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
 		E16963912111A44300195881 /* PDFViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PDFViewController.xib; sourceTree = "<group>"; };
 		E16963962111A9E000195881 /* PDF.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PDF.pdf; sourceTree = "<group>"; };
+		E169D96B21C9F2C800FA6CEE /* MJRefresh+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MJRefresh+Rx.swift"; sourceTree = "<group>"; };
+		E169D96D21CA1B2300FA6CEE /* RxMJRefreshViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxMJRefreshViewController.swift; sourceTree = "<group>"; };
+		E169D97021CA1B9700FA6CEE /* RefreshService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshService.swift; sourceTree = "<group>"; };
+		E169D97221CA1CF900FA6CEE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		E19979502134F6D1003D773B /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		E1D5C836214936BA00B0711B /* HttpbinAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpbinAPI.swift; sourceTree = "<group>"; };
 		E1D5C8382149451E00B0711B /* MoyaNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaNetwork.swift; sourceTree = "<group>"; };
@@ -149,10 +157,28 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E169D96A21C9F2AF00FA6CEE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E169D96B21C9F2C800FA6CEE /* MJRefresh+Rx.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E169D96F21CA1B4A00FA6CEE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E169D97021CA1B9700FA6CEE /* RefreshService.swift */,
+				E169D97221CA1CF900FA6CEE /* ViewModel.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		E199794F2134F69A003D773B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				E19979502134F6D1003D773B /* MusicViewController.swift */,
+				E169D96D21CA1B2300FA6CEE /* RxMJRefreshViewController.swift */,
 				E1090A0F213D1301008094BF /* RxDay3ViewController.swift */,
 				E10BE31B2147E8E500FE7B80 /* MoyaViewController.swift */,
 				E10BE31D2147EB1400FE7B80 /* DouBanAPI.swift */,
@@ -200,6 +226,8 @@
 		E1E9709B2110334600C486EF /* Rx_day1 */ = {
 			isa = PBXGroup;
 			children = (
+				E169D96F21CA1B4A00FA6CEE /* Service */,
+				E169D96A21C9F2AF00FA6CEE /* Extension */,
 				E1D5C847214B592A00B0711B /* MBProgressHUD+Add */,
 				E199794F2134F69A003D773B /* Controller */,
 				E16963962111A9E000195881 /* PDF.pdf */,
@@ -400,6 +428,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/NSObject+Rx/NSObject_Rx.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -416,6 +445,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObject_Rx.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -501,6 +531,7 @@
 				E1E9709F2110334600C486EF /* ViewController.swift in Sources */,
 				E19979512134F6D1003D773B /* MusicViewController.swift in Sources */,
 				E1E970CD2110349300C486EF /* MusicModel.swift in Sources */,
+				E169D96C21C9F2C800FA6CEE /* MJRefresh+Rx.swift in Sources */,
 				E1E9709D2110334600C486EF /* AppDelegate.swift in Sources */,
 				E1D5C84C214B5DD200B0711B /* MBProgressHUD+CAD.swift in Sources */,
 				E1D5C846214A9D5E00B0711B /* RequestAlertPlugin.swift in Sources */,
@@ -508,12 +539,15 @@
 				E1D5C84A214B592B00B0711B /* MBProgressHUD+Add.m in Sources */,
 				E10BE31C2147E8E500FE7B80 /* MoyaViewController.swift in Sources */,
 				E10BE31E2147EB1400FE7B80 /* DouBanAPI.swift in Sources */,
+				E169D96E21CA1B2300FA6CEE /* RxMJRefreshViewController.swift in Sources */,
+				E169D97321CA1CF900FA6CEE /* ViewModel.swift in Sources */,
 				E16963922111A44300195881 /* PDFViewController.swift in Sources */,
 				E1D5C837214936BA00B0711B /* HttpbinAPI.swift in Sources */,
 				E1E970CC2110349300C486EF /* MusicListViewModel.swift in Sources */,
 				E169638E211041C700195881 /* SimpleValidationViewController.swift in Sources */,
 				E1D5C83B2149F86800B0711B /* MyServiceAPI.swift in Sources */,
 				E1090A10213D1301008094BF /* RxDay3ViewController.swift in Sources */,
+				E169D97121CA1B9700FA6CEE /* RefreshService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

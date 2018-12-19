@@ -65,7 +65,18 @@ class MoyaViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         }
 
-        
+        let HttpbinProvider = MoyaProvider<Httpbin>(plugins: [
+//            AuthPlugin(token: "hangge12345")
+            ])
+        //使用我们的provider进行网络请求（获取频道列表数据）
+        HttpbinProvider.request(.anything("")) { (result) in
+            if case let .success(response) = result {
+                //解析数据
+                let data = try? response.mapJSON()
+                let json = JSON(data!)
+                
+            }
+        }
     }
     
     //返回表格分区数
@@ -169,7 +180,7 @@ class MoyaViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.showAlert(title: channelName, message: message)
             }
         }
-        /*
+        
         Network.request(.playlist(channelId), success: { (json) in
             //获取歌曲信息
             let music = json["song"].arrayValue[0]
@@ -184,7 +195,7 @@ class MoyaViewController: UIViewController, UITableViewDelegate, UITableViewData
         }, failure: { error in
             print("请求失败！错误信息：\(error.errorDescription ?? "")")
         })
- */
+ 
         
     }
     //显示消息

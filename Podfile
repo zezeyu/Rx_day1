@@ -12,6 +12,7 @@ target 'Rx_day1' do
   pod 'NSObject+Rx'
   pod 'RxGesture'
   pod 'Then'
+  pod 'MJRefresh'
 #  pod 'Moya/ReactiveSwift',   '~> 8.0.5'
   pod 'Moya'
   pod 'SwiftyJSON'
